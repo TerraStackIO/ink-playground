@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { render, Color, Box, Text, renderToString } from "ink";
+import { render, Color, Box, Text } from "ink";
 import spinners from "cli-spinners";
 import boxen from "boxen";
 
@@ -10,7 +10,7 @@ class Boxen extends Component {
 
   render() {
     const { children } = this.props;
-    return boxen(renderToString(children), { padding: 1 });
+    return boxen(children, { padding: 1 });
   }
 }
 
@@ -67,7 +67,7 @@ render(
     </Box>
     <Box padding={2}>
       <Boxen>
-        <Spinner />
+        {/* <Spinner /> Can't provide components. render2string breaks as well*/}
         Foo
       </Boxen>
     </Box>

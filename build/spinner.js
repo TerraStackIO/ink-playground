@@ -21,7 +21,7 @@ class Boxen extends _react.Component {
     const {
       children
     } = this.props;
-    return (0, _boxen.default)((0, _ink.renderToString)(children), {
+    return (0, _boxen.default)(children, {
       padding: 1
     });
   }
@@ -81,4 +81,4 @@ class Spinner extends _react.Component {
   underline: true
 }, "Yeah"), "Foo")), _react.default.createElement(_ink.Box, {
   padding: 2
-}, _react.default.createElement(Boxen, null, _react.default.createElement(Spinner, null), "Foo"))));
+}, _react.default.createElement(Boxen, null, "Foo"))));
